@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Bold.otf">
+            <string>Dosis-Bold</string>
+        </array>
+        <array key="Dosis-Light.otf">
+            <string>Dosis-Light</string>
+        </array>
+        <array key="Dosis-Medium.otf">
+            <string>Dosis-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Lyrics-->
+        <scene sceneID="Wbm-cU-1rU">
+            <objects>
+                <viewController storyboardIdentifier="LyricsViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AFF-gF-TiD" userLabel="Lyrics" customClass="LyricsViewController" customModule="PHTNMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="io9-Yc-96S"/>
+                        <viewControllerLayoutGuide type="bottom" id="npf-Dj-Dc4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkY-Xr-SxP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRf-x4-SfP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="121"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wPi-1W-zDM" userLabel="AlbumImageView">
+                                <rect key="frame" x="10" y="74" width="100" height="102"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="752" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtE-gv-gEN" userLabel="SongLabel">
+                                <rect key="frame" x="118" y="74" width="241" height="26"/>
+                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-Bk-Jz9" userLabel="ArtistLabel">
+                                <rect key="frame" x="118" y="108" width="241" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6iS-Cd-glD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dosis-Light" family="Dosis" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp9-7h-I2T" userLabel="AlbumLabel">
+                                <rect key="frame" x="118" y="136" width="241" height="40"/>
+                                <fontDescription key="fontDescription" name="Dosis-Light" family="Dosis" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02j-Bk-MKc" userLabel="PlayButton">
+                                <rect key="frame" x="43" y="107" width="35" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="PVP-a6-crZ"/>
+                                    <constraint firstAttribute="width" constant="35" id="Z7Z-qt-dI7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" image="PlayIcon"/>
+                                <connections>
+                                    <action selector="playTrack" destination="AFF-gF-TiD" eventType="touchUpInside" id="y6T-nl-rgQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-eV-TaR" userLabel="LyricTextView">
+                                <rect key="frame" x="0.0" y="184" width="375" height="459"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Dosis-Medium" family="Dosis" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-ip-7J9">
+                                <rect key="frame" x="0.0" y="650" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9py-MN-nDy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="16"/>
+                                <state key="normal" title="View Full Lyrics">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFullLyrics" destination="AFF-gF-TiD" eventType="touchUpInside" id="Rsr-Ar-y90"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9KJ-Bk-Jz9" firstAttribute="trailing" secondItem="Rp9-7h-I2T" secondAttribute="trailing" id="109-Uc-rsv"/>
+                            <constraint firstItem="qtE-gv-gEN" firstAttribute="trailing" secondItem="fkY-Xr-SxP" secondAttribute="trailingMargin" id="1Ao-5t-4re"/>
+                            <constraint firstItem="XRf-x4-SfP" firstAttribute="top" secondItem="io9-Yc-96S" secondAttribute="bottom" id="1fP-a7-IHw"/>
+                            <constraint firstItem="XRf-x4-SfP" firstAttribute="leading" secondItem="fkY-Xr-SxP" secondAttribute="leading" id="3FL-Ns-Vmh"/>
+                            <constraint firstItem="XRf-x4-SfP" firstAttribute="centerY" secondItem="wPi-1W-zDM" secondAttribute="centerY" id="53d-fc-qXF"/>
+                            <constraint firstItem="XRf-x4-SfP" firstAttribute="leading" secondItem="jVD-eV-TaR" secondAttribute="leading" id="5op-yI-S6I"/>
+                            <constraint firstItem="wPi-1W-zDM" firstAttribute="top" secondItem="io9-Yc-96S" secondAttribute="bottom" constant="10" id="6TS-Cx-bzn"/>
+                            <constraint firstItem="Rp9-7h-I2T" firstAttribute="top" secondItem="9KJ-Bk-Jz9" secondAttribute="bottom" constant="8" symbolic="YES" id="9k2-1C-3pa"/>
+                            <constraint firstItem="wPi-1W-zDM" firstAttribute="centerY" secondItem="02j-Bk-MKc" secondAttribute="centerY" id="Cv1-fS-8mb"/>
+                            <constraint firstItem="9KJ-Bk-Jz9" firstAttribute="top" secondItem="qtE-gv-gEN" secondAttribute="bottom" constant="8" symbolic="YES" id="F1b-wl-NVR"/>
+                            <constraint firstItem="9KJ-Bk-Jz9" firstAttribute="leading" secondItem="Rp9-7h-I2T" secondAttribute="leading" id="IRw-eI-tfj"/>
+                            <constraint firstItem="qtE-gv-gEN" firstAttribute="trailing" secondItem="9KJ-Bk-Jz9" secondAttribute="trailing" id="KJs-Iq-tgw"/>
+                            <constraint firstItem="jVD-eV-TaR" firstAttribute="trailing" secondItem="zJI-ip-7J9" secondAttribute="trailing" id="M2S-sw-G2M"/>
+                            <constraint firstItem="zJI-ip-7J9" firstAttribute="bottom" secondItem="npf-Dj-Dc4" secondAttribute="top" id="Rae-5q-v8K"/>
+                            <constraint firstItem="wPi-1W-zDM" firstAttribute="top" secondItem="qtE-gv-gEN" secondAttribute="top" id="Sjc-2j-VcK"/>
+                            <constraint firstItem="Rp9-7h-I2T" firstAttribute="leading" secondItem="02j-Bk-MKc" secondAttribute="trailing" constant="40" id="Vap-Wo-abc"/>
+                            <constraint firstItem="jVD-eV-TaR" firstAttribute="top" secondItem="wPi-1W-zDM" secondAttribute="bottom" constant="8" symbolic="YES" id="YIK-Th-uWG"/>
+                            <constraint firstItem="jVD-eV-TaR" firstAttribute="top" secondItem="02j-Bk-MKc" secondAttribute="bottom" constant="40" id="ZmZ-xd-6Jo"/>
+                            <constraint firstItem="wPi-1W-zDM" firstAttribute="leading" secondItem="fkY-Xr-SxP" secondAttribute="leadingMargin" constant="-6" id="fHb-86-7df"/>
+                            <constraint firstItem="qtE-gv-gEN" firstAttribute="leading" secondItem="9KJ-Bk-Jz9" secondAttribute="leading" id="fuS-1N-yTW"/>
+                            <constraint firstItem="XRf-x4-SfP" firstAttribute="trailing" secondItem="jVD-eV-TaR" secondAttribute="trailing" id="nR1-Wu-n8r"/>
+                            <constraint firstItem="wPi-1W-zDM" firstAttribute="centerX" secondItem="02j-Bk-MKc" secondAttribute="centerX" id="oBm-45-t2E"/>
+                            <constraint firstItem="jVD-eV-TaR" firstAttribute="leading" secondItem="zJI-ip-7J9" secondAttribute="leading" id="sVF-9h-eTs"/>
+                            <constraint firstAttribute="trailing" secondItem="XRf-x4-SfP" secondAttribute="trailing" id="wuC-tG-BOZ"/>
+                            <constraint firstItem="jVD-eV-TaR" firstAttribute="top" secondItem="Rp9-7h-I2T" secondAttribute="bottom" constant="8" symbolic="YES" id="xxo-BX-t65"/>
+                            <constraint firstItem="qtE-gv-gEN" firstAttribute="leading" secondItem="wPi-1W-zDM" secondAttribute="trailing" constant="8" symbolic="YES" id="zhY-JT-yvM"/>
+                            <constraint firstItem="zJI-ip-7J9" firstAttribute="top" secondItem="jVD-eV-TaR" secondAttribute="bottom" constant="7" id="zsG-jF-FBM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lyrics" id="iZy-HZ-XSI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="700"/>
+                    <connections>
+                        <outlet property="albumLabel" destination="Rp9-7h-I2T" id="Bh3-Nx-Lrk"/>
+                        <outlet property="albumView" destination="wPi-1W-zDM" id="icU-rD-X4B"/>
+                        <outlet property="artistLabel" destination="9KJ-Bk-Jz9" id="g7Q-dm-xxk"/>
+                        <outlet property="lyricTextView" destination="jVD-eV-TaR" id="o3v-1l-vb3"/>
+                        <outlet property="playButton" destination="02j-Bk-MKc" id="FVk-Xg-gT1"/>
+                        <outlet property="songLabel" destination="qtE-gv-gEN" id="fGx-KZ-BZp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxs-bN-ukd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.60000000000002" y="385.90704647676165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlayIcon" width="16" height="16"/>
+    </resources>
+</document>

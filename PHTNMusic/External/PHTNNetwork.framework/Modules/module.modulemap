@@ -1,0 +1,10 @@
+framework module PHTNNetwork {
+  umbrella header "PHTNNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module PHTNNetwork.Swift {
+    header "PHTNNetwork-Swift.h"
+}
